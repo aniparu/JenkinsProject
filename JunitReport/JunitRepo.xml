@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="127.835859">
+<testcase classname="To Validate the login functionality for amazon" name="To validate the login with invalid username and invalid password" time="20.409436">
+<system-out><![CDATA[Given To launch the chrome browser and max the browser......................passed
+When To launch the amazon url...............................................passed
+And To pass the invalid username or phoneNo in email field..................passed
+And To click the Continue button............................................passed
+And To pass the invalid password in password field..........................passed
+And To click the signin button..............................................passed
+Then To close the browser...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To Validate the login functionality of facebook application" name="To validate login with valid username and valid password" time="9.101222">
+<failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#13;&#10;&#9;at org.stepdefinition.FacebookLogin.to_pass_vaild_password_in_password_field(FacebookLogin.java:39)&#13;&#10;&#9;at ✽.To pass vaild password in password field(src/test/resources/Facebook.feature:12)&#13;&#10;"><![CDATA[Given To launch the browser and max window..................................passed
+When To launch the url of the application...................................passed
+And To pass vaild username in email field...................................passed
+And To pass vaild password in password field................................failed
+And To click the login button...............................................skipped
+Then To close the browser...................................................skipped
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at org.stepdefinition.FacebookLogin.to_pass_vaild_password_in_password_field(FacebookLogin.java:39)
+	at ✽.To pass vaild password in password field(src/test/resources/Facebook.feature:12)
+]]></failure>
+</testcase>
+<testcase classname="To Validate the login functionality of facebook application" name="To validate the positive and negative testcases in login field" time="17.460993">
+<system-out><![CDATA[Given To launch the browser and max window..................................passed
+When launch the url of the application......................................passed
+And pass the positive and negative "abc@gmail.com" in email field...........passed
+And pass the positive and negative "abc123" in password field...............passed
+Then close the browser......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To Validate the login functionality of facebook application" name="To validate the positive and negative testcases in login field 2" time="35.162418">
+<system-out><![CDATA[Given To launch the browser and max window..................................passed
+When launch the url of the application......................................passed
+And pass the positive and negative "def@gmail.com" in email field...........passed
+And pass the positive and negative "def1223" in password field..............passed
+Then close the browser......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To Validate the login functionality of facebook application" name="To validate the positive and negative testcases in login field 3" time="38.527806">
+<failure message="org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: disconnected: received Inspector.detached event&#10;  (failed to check if window was closed: disconnected: unable to connect to renderer)&#10;  (Session info: chrome=106.0.5249.119)&#10;Build info: version: '4.0.0', revision: '3a21814679'&#10;System info: host: 'PARKAVI', ip: '192.168.2.130', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]&#13;&#10;&#9;at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)&#13;&#10;&#9;at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)&#13;&#10;&#9;at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:168)&#13;&#10;&#9;at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)&#13;&#10;&#9;at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:104)&#13;&#10;&#9;at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:91)&#13;&#10;&#9;at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:46)&#13;&#10;&#9;at org.stepdefinition.BaseClass.browserLaunch(BaseClass.java:30)&#13;&#10;&#9;at org.stepdefinition.HooksClasses.preCondition1(HooksClasses.java:18)&#13;&#10;&#9;at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Method.invoke(Unknown Source)&#13;&#10;&#9;at cucumber.runtime.Utils$1.call(Utils.java:26)&#13;&#10;&#9;at cucumber.runtime.Timeout.timeout(Timeout.java:16)&#13;&#10;&#9;at cucumber.runtime.Utils.invoke(Utils.java:20)&#13;&#10;&#9;at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)&#13;&#10;&#9;at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)&#13;&#10;&#9;at cucumber.runner.TestStep.executeStep(TestStep.java:63)&#13;&#10;&#9;at cucumber.runner.TestStep.run(TestStep.java:49)&#13;&#10;&#9;at cucumber.runner.TestCase.run(TestCase.java:40)&#13;&#10;&#9;at cucumber.runner.Runner.runPickle(Runner.java:40)&#13;&#10;&#9;at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)&#13;&#10;&#9;at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)&#13;&#10;&#9;at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)&#13;&#10;&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;&#10;&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;&#10;&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;&#10;&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;&#10;&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;&#10;&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;&#10;&#9;at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)&#13;&#10;&#9;at cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)&#13;&#10;&#9;at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)&#13;&#10;&#9;at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;&#10;&#9;at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;&#10;&#9;at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;&#10;&#9;at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;&#10;&#9;at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;&#10;&#9;at cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)&#13;&#10;&#9;at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)&#13;&#10;&#9;at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;&#10;&#9;at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;&#10;&#9;at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;&#10;&#9;at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)&#13;&#10;&#9;at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)&#13;&#10;&#9;at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)&#13;&#10;&#9;at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)&#13;&#10;"><![CDATA[Given To launch the browser and max window..................................skipped
+When launch the url of the application......................................skipped
+And pass the positive and negative "ghi@gmail.com" in email field...........skipped
+And pass the positive and negative "ghi123" in password field...............skipped
+Then close the browser......................................................skipped
+
+StackTrace:
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: disconnected: received Inspector.detached event
+  (failed to check if window was closed: disconnected: unable to connect to renderer)
+  (Session info: chrome=106.0.5249.119)
+Build info: version: '4.0.0', revision: '3a21814679'
+System info: host: 'PARKAVI', ip: '192.168.2.130', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:84)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:62)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:168)
+	at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:104)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:91)
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:46)
+	at org.stepdefinition.BaseClass.browserLaunch(BaseClass.java:30)
+	at org.stepdefinition.HooksClasses.preCondition1(HooksClasses.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:63)
+	at cucumber.runner.TestStep.run(TestStep.java:49)
+	at cucumber.runner.TestCase.run(TestCase.java:40)
+	at cucumber.runner.Runner.runPickle(Runner.java:40)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:124)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at cucumber.api.junit.Cucumber$1.evaluate(Cucumber.java:133)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+]]></failure>
+</testcase>
+<testcase classname="To Validate the login functionality of facebook application" name="To validate the positive and negative testcases in login field 4" time="7.173984">
+<system-out><![CDATA[Given To launch the browser and max window..................................passed
+When launch the url of the application......................................passed
+And pass the positive and negative "xyz@gmail.com" in email field...........passed
+And pass the positive and negative "xyz123" in password field...............passed
+Then close the browser......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
